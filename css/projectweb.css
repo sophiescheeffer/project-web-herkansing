@@ -1,0 +1,490 @@
+/*algemeen*/
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url('https://fonts.googleapis.com/css?family=Roboto+Condensed')
+}
+
+* {
+    background-color: 255, 255, 255;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.375em;
+    color: #444;
+}
+
+body {
+    margin: 0;
+}
+
+a:link {
+    text-decoration-line: none;
+}
+
+a:hover {
+  font-weight: bold;  
+}
+
+a, button {
+    border-style: none;
+    margin-top: 10px;
+    min-height: unset;
+    color: #ffad00;
+    text-align: left;
+}
+
+
+/*navigatie*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.8em;
+    background-color: #73d700;
+    color: white;
+    text-decoration-line: none;
+}
+
+li img:first-of-type {
+    top: 0;
+    max-width: 7em;
+    background-color: transparent;
+    position: absolute;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    margin: 1.2rem;
+}
+
+li:first-of-type {
+    margin-right: auto;
+    background-color: transparent;
+}
+
+nav ul li a:link {
+    color: white;
+}
+
+nav ul li a:visited {
+    color: aliceblue;
+}
+
+
+/*header*/
+
+h1 {
+    margin-top: 1em;
+    font-size: 3em;
+    color: white;
+}
+
+.header {
+    margin-top: 2.5em;
+    padding: 2em;
+    color: white;
+    background-color: hsl(41, 100%, 50%, .7);
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: white;
+    margin: -43px 0px 40px;
+}
+
+header {
+    background-image: url("../afbeeldingen/Studenttraveller.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+h3 {
+    padding: 1em;
+    margin: 3em -2em -2em;
+    text-align: center;
+    background-color: hsl(41, 100%, 50%);
+}
+
+h3:hover {
+    font-weight: bold;
+} 
+
+header a {
+    color: white;
+    margin-right: 2em;
+}
+
+
+/*openingspagina*/
+
+h4 {
+    margin-left: 2em;
+    margin-right: 2em;
+    border-top: 2px solid #efefef;
+}
+
+article {
+    margin: 2em;
+    border: 1px solid #e1e1e1;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 20em;
+    min-height: 12.5em;
+}
+
+article h2 {
+    margin-top: 2em;
+}
+
+article p {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+section {
+    margin: 2em;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 20em;
+    min-height: 12.5em;
+    background-size: cover;
+    background-position: center center;
+}
+
+section div {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: hsla(0, 100%, 0%, .6);
+}
+
+section h2 {
+    background-image: url(../afbeeldingen/iconensection.png);
+    background-position: -2em 20em 2em 2em; 
+    background-repeat: no-repeat;
+      height: 2em;
+    margin-top: 2em;
+}
+
+section p {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+}
+
+section.een {
+    background-image: url("../afbeeldingen/verhalen/kater.jpg")
+}
+
+section.twee {
+    background-image: url("../afbeeldingen/verhalen/verliefd.jpg")
+}
+
+section.drie {
+    background-image: url("../afbeeldingen/verhalen/hongerwinter.jpg")
+}
+
+section.vier {
+    background-image: url("../afbeeldingen/verhalen/harrymulisch.jpg")
+}
+
+section,
+h2,
+p {
+    color: white;
+}
+
+.genres article {
+    border: 1px solid #e1e1e1;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 8em;
+    max-height: 8.5em;
+}
+
+.genres article a {
+    font-size: 90%;
+}
+
+.genres article img {
+    max-height: 7em;
+}
+
+.genres article h2 {
+    margin: 10px 0 3px;
+}
+
+
+@media (min-width: 30em) {
+  .populair {
+   
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 40em) {
+  .populair {
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 65em) {
+  .populair {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 75em) {
+  .populair {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+
+@media (min-width: 15em) {
+  .genres {
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 40em) {
+  .genres {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 50em) {
+ .genres{
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 65em) {
+  .genres {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  }
+}
+
+@media (min-width: 75em) {
+  .genres {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  }
+}
+
+@media (min-width: 90em) {
+  .genres {
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  }
+}
+
+
+
+
+/*@media (min-width: 40em) {
+    header>button {
+        display: none;
+    }
+    header>form {
+        display: block;
+    }
+}
+
+
+@media (min-width: 7em) {
+    header>button {
+        display: none;
+    }
+    header>form {
+        display: block;
+    }
+}
+
+
+
+
+
+/*contactpagina*/
+
+
+#login main form {
+    background-color: #F7F7F7;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7em;
+    margin-bottom: 2em;
+    
+}
+
+#login fieldset {
+    border: none;
+    max-width: 1em;
+    margin: 7em 10% ; 
+    padding: 0;
+}
+
+#login legend {
+    font-size: 1.2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+
+#login label {
+    display: block;
+    margin-top: 0.6em;
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+
+#login input {
+    padding: 2px 5px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    font-size: 1em;
+    vertical-align: top;
+    background: #FFF;
+    margin-left: 2.5em;
+    max-width: 75%;
+}
+
+button {
+    color: white;
+    padding: 1em 1em;
+    margin: 1em;
+    margin-top: 2em;
+    width: 4.5em;
+    border-radius: 5px;
+    background-color:#FFAD00;
+    :hover {
+  font-weight: bold;  
+}
+}
+
+
+
+
+/*pagina: Genre*/
+
+h4.genreliefde {
+    margin-top: 5em;
+}
+
+
+.sorteren {
+    border: none;
+   display: flex;
+    margin-left: 1.1em;
+    border: none;
+}
+
+.sorteren button {
+    width: 6em;
+    margin: 1em 0em ;
+}
+
+
+.dropbtn {
+    margin-top: -1em;
+    text-align: center;
+    background-color: #73d700;
+    cursor: pointer;
+}
+
+.dropbtn img {
+    margin-top: 1.8em;
+    margin-left: 0.5em;
+}
+
+.dropbtn:hover {
+    font-weight: bold;
+} 
+
+.dropdown-content {
+    display: none;
+    background-color: #ffad00;
+    min-width: 180px;
+    overflow: auto;
+    box-shadow: rgba(0,0,0,0.175) 1px 3px 5px;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    padding: 0.7em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+    font-weight: bold;     
+}
+
+.show {
+    display: block;
+}
+
+
+/*verhalen websites*/
+
+#katerlees div {
+	padding: 0;
+	height: 100%;
+}
+
+#katerlees div img {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 3em;
+}
+
+#katerlees footer {
+    background-color: #F7F7F7;
+    margin: 0;
+    width: 100%;
+    height: 5em;
+    background-image: none;
+}
+
+#katerlees footer img {
+    width: 10%;
+    margin-left: 4em;
+}
+
+
+/*footer*/
+
+footer {
+  background: url("https://cdn.flixbus.de/assets/images-20180806/footer/flixmobility-2x.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 20em;
+  
+}
