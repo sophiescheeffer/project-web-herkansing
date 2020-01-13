@@ -4,23 +4,20 @@
 
 
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+var dropdown = document.querySelector(".dropbtn");
+
+
+function showDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    
+    if (dropdownContent.style.display == "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
     }
-  }
+    
+    
 }
 
-
-
-<!--bron: https://www.w3schools.com/howto/howto_js_dropdown.asp-->
+dropdown.addEventListener('click', showDropdown);

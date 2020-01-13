@@ -13,6 +13,12 @@
     color: #444;
 }
 
+
+/*bron: https://www.w3schools.com/cssref/pr_scroll-behavior.asp */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -45,6 +51,7 @@ nav {
     background-color: #73d700;
     color: white;
     text-decoration-line: none;
+    z-index: 999;
 }
 
 li img:first-of-type {
@@ -88,18 +95,6 @@ h1 {
     color: white;
 }
 
-.header {
-    margin-top: 2.5em;
-    padding: 2em;
-    color: white;
-    background-color: hsl(41, 100%, 50%, .7);
-}
-
-header h2 {
-    font-size: 1.2em;
-    color: white;
-    margin: -43px 0px 40px;
-}
 
 header {
     background-image: url("../afbeeldingen/Studenttraveller.jpg");
@@ -107,18 +102,64 @@ header {
     background-position: center center;
 }
 
+.header {
+    margin-top: 2.5em;
+    padding: 1em;
+    color: white;
+    background-color: hsl(41, 100%, 50%, .7);
+}
+
+.header h2 {
+    font-size: 1.2em;
+    color: white;
+    margin: -43px 0px 40px;
+}
+
+.headergenre {
+    margin-top: 2.5em;
+    padding: 1em;
+    color: white;
+    background-color: hsl(41, 100%, 50%);
+    text-align: center;
+    font-size: 120%;
+}
+
+.headergenre h2 {
+    font-size: 1.2em;
+    color: white;
+    margin: -43px 0px 40px;
+}
+
+
 h3 {
     padding: 1em;
     margin: 3em -2em -2em;
     text-align: center;
     background-color: hsl(41, 100%, 50%);
+    
 }
 
 h3:hover {
     font-weight: bold;
+    transform: scale(1.1);
+    transform: 
+    transition: transform .3s ease-in-out;
 } 
 
-header a {
+
+.header h2::before {
+    content: open-quote;
+    color: white;
+}
+
+.header h2::after {
+    content: close-quote;
+    color: white;
+    font-size: 1em;
+}
+
+
+.header a {
     color: white;
     margin-right: 2em;
 }
@@ -138,7 +179,7 @@ article {
     padding: 1em;
     border-radius: 5px;
     text-align: center;
-    max-width: 20em;
+   / max-width: 20em;
     min-height: 12.5em;
 }
 
@@ -302,28 +343,6 @@ p {
 
 
 
-/*@media (min-width: 40em) {
-    header>button {
-        display: none;
-    }
-    header>form {
-        display: block;
-    }
-}
-
-
-@media (min-width: 7em) {
-    header>button {
-        display: none;
-    }
-    header>form {
-        display: block;
-    }
-}
-
-
-
-
 
 /*contactpagina*/
 
@@ -371,6 +390,12 @@ p {
     max-width: 75%;
 }
 
+#login input:focus {
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+    border: 2px solid green;
+    outline: none;
+}
+
 button {
     color: white;
     padding: 1em 1em;
@@ -379,18 +404,22 @@ button {
     width: 4.5em;
     border-radius: 5px;
     background-color:#FFAD00;
-    :hover {
-  font-weight: bold;  
-}
 }
 
+button:hover { 
+    transform: scale(1.1);
+    transform: 
+    transition: transform .3s ease-in-out;
+}
 
 
 
-/*pagina: Genre*/
+
+/*pagina Genre*/
+
 
 h4.genreliefde {
-    margin-top: 5em;
+    margin-top: 1em;
 }
 
 
@@ -423,6 +452,9 @@ h4.genreliefde {
     font-weight: bold;
 } 
 
+
+
+/*BRONNEN BIJ ZETTEN!! */
 .dropdown-content {
     display: none;
     background-color: #ffad00;
@@ -431,6 +463,7 @@ h4.genreliefde {
     box-shadow: rgba(0,0,0,0.175) 1px 3px 5px;
     z-index: 1001;
     border-radius: 5px;
+    position: absolute;
 }
 
 .dropdown-content a {
@@ -475,6 +508,18 @@ h4.genreliefde {
 #katerlees footer img {
     width: 10%;
     margin-left: 4em;
+}
+
+
+/*bookmark*/
+.een::before, .drie::before {
+    content: "";
+    padding: 1rem 1.0rem;
+    background: #8c1b1b;
+    position:relative;
+    top: 14px;
+    left: 6rem;
+    z-index: 0;
 }
 
 
