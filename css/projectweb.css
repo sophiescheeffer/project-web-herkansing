@@ -87,6 +87,10 @@ nav ul li a:visited {
 }
 
 
+
+
+
+
 /*header*/
 
 h1 {
@@ -118,10 +122,16 @@ header {
 .headergenre {
     margin-top: 2.5em;
     padding: 1em;
-    color: white;
     background-color: hsl(41, 100%, 50%);
     text-align: center;
     font-size: 120%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.headergenre:hover {
+    background-color: #73d700;
 }
 
 .headergenre h2 {
@@ -131,22 +141,25 @@ header {
 }
 
 
+/*bron: https://www.youtube.com/watch?v=Nloq6uzF8RQ&t=876s*/
 h3 {
     padding: 1em;
     margin: 3em -2em -2em;
     text-align: center;
     background-color: hsl(41, 100%, 50%);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
     
 }
 
-h3:hover {
-    font-weight: bold;
-    transform: scale(1.1);
-    transform: 
-    transition: transform .3s ease-in-out;
-} 
+h3:hover{
+    background-color:hsl(30, 100%, 50%);
+    transform: rotatex(360deg);
+}
 
 
+/*bron: https://youtu.be/xoRbkm8XgfQ*/
 .header h2::before {
     content: open-quote;
     color: white;
@@ -163,6 +176,10 @@ h3:hover {
     color: white;
     margin-right: 2em;
 }
+
+
+
+
 
 
 /*openingspagina*/
@@ -225,19 +242,19 @@ section p {
 }
 
 section.een {
-    background-image: url("../afbeeldingen/verhalen/kater.jpg")
+    background-image: url("../afbeeldingen/verhalen/kater.jpg");
 }
 
 section.twee {
-    background-image: url("../afbeeldingen/verhalen/verliefd.jpg")
+    background-image: url("../afbeeldingen/verhalen/verliefd.jpg");
 }
 
 section.drie {
-    background-image: url("../afbeeldingen/verhalen/hongerwinter.jpg")
+    background-image: url("../afbeeldingen/verhalen/hongerwinter.jpg");
 }
 
 section.vier {
-    background-image: url("../afbeeldingen/verhalen/harrymulisch.jpg")
+    background-image: url("../afbeeldingen/verhalen/harrymulisch.jpg");
 }
 
 section,
@@ -344,6 +361,8 @@ p {
 
 
 
+
+
 /*contactpagina*/
 
 
@@ -415,6 +434,8 @@ button:hover {
 
 
 
+
+
 /*pagina Genre*/
 
 
@@ -427,6 +448,7 @@ h4.genreliefde {
     border: none;
    display: flex;
     margin-left: 1.1em;
+    margin-top: 2em;
     border: none;
 }
 
@@ -435,7 +457,7 @@ h4.genreliefde {
     margin: 1em 0em ;
 }
 
-
+/*bron JavaScript & Jquery -boek*/
 .dropbtn {
     margin-top: -1em;
     text-align: center;
@@ -453,8 +475,6 @@ h4.genreliefde {
 } 
 
 
-
-/*BRONNEN BIJ ZETTEN!! */
 .dropdown-content {
     display: none;
     background-color: #ffad00;
@@ -480,6 +500,8 @@ h4.genreliefde {
 .show {
     display: block;
 }
+
+
 
 
 /*verhalen websites*/
@@ -511,7 +533,13 @@ h4.genreliefde {
 }
 
 
+
+
+
+
 /*bookmark*/
+
+/*bron: https://www.youtube.com/watch?v=zGiirUiWslI*/
 .een::before, .drie::before {
     content: "";
     padding: 1rem 1.0rem;
@@ -521,6 +549,19 @@ h4.genreliefde {
     left: 6rem;
     z-index: 0;
 }
+
+.twee::before, .vier::before {
+        content: "";
+    padding: 1rem 1.0rem;
+    background: transparent;
+    position:relative;
+    top: 14px;
+    left: 6rem;
+    z-index: 0;
+}
+
+
+
 
 
 /*footer*/
